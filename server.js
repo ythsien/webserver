@@ -2,6 +2,9 @@
 
 const http = require('http');
 
+// 到系統環境取得系統給的port
+var port = process.env.port || 1234 ;
+
 // 建立一個 HttpServer
 // req 從 client 端發出
 // res 是由我們發出去給client端的
@@ -22,6 +25,6 @@ var server = http.createServer(function(req, res){
     // 因為資料是先寫到網路卡的buffer，等資料都確認出去後才結束程式，確保成是正確送出
 });
 
-// 將 Server 開啟 port 1234 執行起來
-server.listen(1234);
-console.log('Server running at http://127.0.0.1:1234');
+// 將 Server 開啟 port 執行起來
+server.listen(port);
+console.log('Server running at http://127.0.0.1:'+port);
