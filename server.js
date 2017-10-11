@@ -20,6 +20,7 @@ var server = http.createServer(function(req, res){
     res.writeHead(200, resHeader);
     res.write('<h1>Hello</h1>','utf8');
     res.write('<p>這是由node.js建立的Webserver</p>','utf8');
+    res.write('<p>已經成功發布到Heroku主機</p>','utf8');
     res.end(); 
     // 最後寫完一定要加 res.end() 
     // 因為資料是先寫到網路卡的buffer，等資料都確認出去後才結束程式，確保成是正確送出
