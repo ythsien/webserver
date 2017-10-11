@@ -3,7 +3,7 @@
 const http = require('http');
 
 // 到系統環境取得系統給的port
-var port = process.env.port || 1234 ;
+var port = process.env.PORT || 1234 ;
 
 // 建立一個 HttpServer
 // req 從 client 端發出
